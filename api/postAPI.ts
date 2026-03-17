@@ -1,7 +1,7 @@
 import { APIRequestContext, expect } from '@playwright/test';
 import { Post } from './types';
 
-export class PostsApi {
+export class PostAPI {
   constructor(private request: APIRequestContext) {}
 
   async createPost(postData: Post): Promise<{ responseBody: Post; createdId: number }> {

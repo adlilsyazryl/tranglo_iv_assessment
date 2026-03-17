@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
-import { PostsApi } from '../api/PostAPI';
+import { PostAPI } from '../api/PostAPI';
 import { Post } from '../api/types';
 
 test.use({ baseURL: 'https://jsonplaceholder.typicode.com' });
 
 test('2. API Automation - POM style', async ({ request }) => {
-  const postsApi = new PostsApi(request);
+  const postsApi = new PostAPI(request);
 
   const originalPost: Post = {
     title: 'Valar Morghulis',
