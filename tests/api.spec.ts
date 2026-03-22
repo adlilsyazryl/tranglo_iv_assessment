@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { PostAPI } from '../api/PostAPI';
+import { PostAPI } from '../api/PostsAPI';
 import { Post } from '../api/types';
 
 test.use({ baseURL: 'https://jsonplaceholder.typicode.com' });
