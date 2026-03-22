@@ -8,14 +8,14 @@ export class LoginPage {
   }
 
   async checker() {
-    await expect(this.page.locator('[data-test="username"]')).toBeVisible();
-    await expect(this.page.locator('[data-test="password"]')).toBeVisible();
-    await expect(this.page.locator('[data-test="login-button"]')).toBeVisible();
+    await expect(this.page.locator('[id="user-name"]')).toBeVisible();
+    await expect(this.page.locator('[id="password"]')).toBeVisible();
+    await expect(this.page.locator('[id="login-button"]')).toBeVisible();
   }
 
   async login(userName: string, password: string) {
-    await this.page.locator('[placeholder="Username"]').fill(userName);
-    await this.page.locator('[placeholder="Password"]').fill(password);
+    await this.page.locator('[id="user-name"]').fill(userName);
+    await this.page.locator('[id="password"]').fill(password);
     await this.page.locator('[id="login-button"]').click();
   }
 }
